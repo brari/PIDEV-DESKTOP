@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="716.0" prefWidth="1011.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pidev.ui.AjouterFXMLController">
+   <children>
+      <Text fill="#b5125e" fontSmoothingType="LCD" layoutX="158.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ajouter un produit">
+         <font>
+            <Font name="Calibri Italic" size="45.0" />
+         </font>
+      </Text>
+      <Label layoutX="34.0" layoutY="103.0" text="Veuillez remplir les champs" textFill="#1da7bf">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="83.0" layoutY="149.0" text="Nom du Produit" textFill="#3f13b9">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="67.0" layoutY="252.0" text="Catégorie du Produit" textFill="#3f13b9">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="77.0" layoutY="362.0" text="Nom de Patisserie" textFill="#3f13b9">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="87.0" layoutY="199.0" text="Prix du Produit" textFill="#3f13b9">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="114.0" layoutY="310.0" text="Details" textFill="#3f13b9">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="nom" layoutX="273.0" layoutY="147.0" prefHeight="26.0" prefWidth="233.0" />
+      <TextField fx:id="prix" layoutX="273.0" layoutY="197.0" prefHeight="26.0" prefWidth="233.0" />
+      <TextField fx:id="det" layoutX="273.0" layoutY="308.0" prefHeight="26.0" prefWidth="233.0" />
+      <TextField fx:id="name" layoutX="273.0" layoutY="360.0" prefHeight="26.0" prefWidth="233.0" />
+      <Button fx:id="btnajouter" alignment="CENTER" cache="true" layoutX="38.0" layoutY="546.0" mnemonicParsing="false" onAction="#ajouterprod" prefHeight="45.0" prefWidth="198.0" style="-fx-background-radius: 40; -fx-background-color: DARKSALMON;" text="Confirmer l'ajout">
+         <font>
+            <Font name="Calibri" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnafficher" layoutX="318.0" layoutY="546.0" mnemonicParsing="false" onAction="#afficherprod" prefHeight="45.0" prefWidth="198.0" style="-fx-background-color: DARKSALMON; -fx-background-radius: 40;" text="Afficher les Produits" />
+      <ImageView fx:id="photo" fitHeight="126.0" fitWidth="292.0" layoutX="545.0" layoutY="14.0" onMouseClicked="#audioplayer" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@patiss.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="120.0" layoutY="405.0" prefHeight="21.0" prefWidth="45.0" text="Image" textFill="#5f0dbc">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="nom1" layoutX="273.0" layoutY="404.0" prefHeight="26.0" prefWidth="233.0" />
+      <Button fx:id="btnparc" layoutX="669.0" layoutY="408.0" mnemonicParsing="false" onAction="#parcourir" prefHeight="45.0" prefWidth="139.0" style="-fx-background-color: DARKSALMON; -fx-background-radius: 40;" text="Parcourir" />
+      <ImageView fx:id="img" fitHeight="195.0" fitWidth="301.0" layoutX="572.0" layoutY="180.0" pickOnBounds="true" preserveRatio="true" />
+      <ComboBox fx:id="cat" layoutX="282.0" layoutY="259.0" prefHeight="28.0" prefWidth="216.0" />
+      <Button fx:id="btncontinuer" layoutX="647.0" layoutY="546.0" mnemonicParsing="false" onAction="#continuer" prefHeight="45.0" prefWidth="198.0" style="-fx-background-color: DARKSALMON; -fx-background-radius: 40;" text="Continuer" />
+   </children>
+</AnchorPane>

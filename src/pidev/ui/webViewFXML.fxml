@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.web.WebView?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="629.0" prefWidth="796.0" style="-fx-background-color: white;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/10.0.1" fx:controller="pidev.ui.WebViewFXMLController">
+   <children>
+      <WebView fx:id="webvi" layoutX="129.0" layoutY="129.0" onMouseClicked="#webvi" prefHeight="700.0" prefWidth="700.0" />
+      <Button fx:id="retouvid" layoutX="53.0" layoutY="54.0" mnemonicParsing="false" onAction="#retouvid" prefHeight="48.0" prefWidth="151.0" style="-fx-background-color: SALMON;" text="Retour " textFill="WHITE">
+         <font>
+            <Font name="System Italic" size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="webAffiche" layoutX="298.0" layoutY="61.0" mnemonicParsing="false" onAction="#webAffiche" prefHeight="48.0" prefWidth="145.0" style="-fx-background-color: SALMON;" text="Interface Affichage" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

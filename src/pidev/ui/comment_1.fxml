@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="592.0" prefWidth="781.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pidev.ui.CommentController_1">
+   <children>
+      <TableView fx:id="tab_commentaireEvent" layoutX="29.0" layoutY="111.0" prefHeight="346.0" prefWidth="519.0">
+         <columns>
+            <TableColumn fx:id="id_utilisateur" prefWidth="63.999961853027344" text="id_utilisateur" visible="false" />
+            <TableColumn fx:id="id" prefWidth="60.00006103515625" text="id" visible="false" />
+            <TableColumn fx:id="comment" prefWidth="420.80001068115234" text="Comment" />
+            <TableColumn fx:id="date" minWidth="0.0" prefWidth="96.00003051757812" text="date" />
+            <TableColumn fx:id="id_comment" minWidth="0.0" prefWidth="122.39998779296877" text="id_comment" visible="false" />
+         </columns>
+      </TableView>
+      <Button fx:id="Commenter" layoutX="626.0" layoutY="333.0" mnemonicParsing="false" onAction="#Commenter" prefHeight="39.0" prefWidth="97.0" text="Commenter" textFill="#d672b3" />
+      <Button fx:id="retour" layoutX="661.0" layoutY="457.0" mnemonicParsing="false" onAction="#retourToEvent" prefHeight="39.0" prefWidth="83.0" text="retour" textFill="#d672b3" />
+      <TextArea fx:id="tf_comment" layoutX="35.0" layoutY="492.0" prefHeight="69.0" prefWidth="591.0" />
+      <Label layoutX="70.0" layoutY="50.0" prefHeight="39.0" prefWidth="127.0" text="Recette" textFill="#d672b3">
+         <font>
+            <Font name="Times New Roman" size="27.0" />
+         </font>
+      </Label>
+      <Label fx:id="code_Event" layoutX="674.0" layoutY="71.0" opacity="0.0" text="Label" />
+      <Label layoutX="-9.0" layoutY="30.0" text="Le Coin Patissier: A la rencontre de vos saveurs" textFill="#2f66f2">
+         <font>
+            <Font name="Algerian" size="18.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="148.0" fitWidth="134.0" layoutX="621.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/patiss.jpg" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

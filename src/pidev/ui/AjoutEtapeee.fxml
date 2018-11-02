@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="563.0" prefWidth="679.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pidev.ui.AjoutEtapeeeController">
+   <children>
+      <Text fx:id="text" fill="#ea4d4d" layoutX="25.0" layoutY="150.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="258.936767578125">
+         <font>
+            <Font name="Times New Roman" size="12.0" />
+         </font></Text>
+      <Label fx:id="code_Event" layoutX="651.0" layoutY="41.0" opacity="0.0" text="Label" />
+      <TableView fx:id="table_ing" layoutX="25.0" layoutY="178.0" prefHeight="170.0" prefWidth="318.0">
+         <columns>
+            <TableColumn fx:id="nom_eta" prefWidth="146.0" text="Nom_etape" />
+            <TableColumn fx:id="desceta" prefWidth="177.0" text="desc" />
+            <TableColumn fx:id="id_utilisateur" prefWidth="88.0" text="id_utilisateur" visible="false" />
+            <TableColumn fx:id="id_eta" prefWidth="75.0" text="id_ing" visible="false" />
+            <TableColumn fx:id="id" prefWidth="75.0" text="id" visible="false" />
+         </columns>
+      </TableView>
+      <Label layoutX="225.0" layoutY="508.0" text="Description :" textFill="#ea4d4d">
+         <font>
+            <Font name="Times New Roman" size="14.0" />
+         </font></Label>
+      <Label layoutX="225.0" layoutY="421.0" text="Nom Etape :" textFill="#ea4d4d">
+         <font>
+            <Font name="Times New Roman" size="14.0" />
+         </font></Label>
+      <TextField fx:id="tf_nometa" layoutX="55.0" layoutY="417.0" />
+      <TextArea fx:id="tf_desceta" layoutX="55.0" layoutY="462.0" prefHeight="69.0" prefWidth="149.0" />
+      <Button fx:id="btn_eta" layoutX="535.0" layoutY="417.0" mnemonicParsing="false" onAction="#ajouterEtape" text="ajouter etape" textFill="#ea4d4d">
+         <font>
+            <Font name="Times New Roman" size="14.0" />
+         </font></Button>
+      <Button fx:id="btn_supp" layoutX="535.0" layoutY="450.0" mnemonicParsing="false" onAction="#SupprimerEtape" prefHeight="25.0" prefWidth="92.0" text="Supprimer" textFill="#ea4d4d">
+         <font>
+            <Font name="Times New Roman" size="12.0" />
+         </font></Button>
+      <Pane layoutY="-1.0" prefHeight="120.0" prefWidth="691.0" style="-fx-background-color: #b80f6f;">
+         <children>
+            <Label layoutX="215.0" layoutY="39.0" prefHeight="28.0" prefWidth="250.0" text="Les Etapes de la recette" textFill="#faf5f5">
+               <font>
+                  <Font name="Times New Roman" size="24.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="102.0" fitWidth="200.0" layoutX="550.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../pidev/images/LogoPIDEV.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Button fx:id="btnHome" layoutX="34.0" layoutY="34.0" mnemonicParsing="false" onAction="#retour" style="-fx-background-color: #FFFFFF;">
+         <graphic>
+            <ImageView fitHeight="41.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../Images/exit.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="btn_modif_eta" layoutX="535.0" layoutY="377.0" mnemonicParsing="false" onAction="#ModifierEtape" prefHeight="25.0" prefWidth="92.0" text="Modifier" textFill="#ea4d4d">
+         <font>
+            <Font name="Times New Roman" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="pa_modifier" layoutX="346.0" layoutY="322.0" mnemonicParsing="false" onAction="#SetTextfield" prefHeight="26.0" prefWidth="78.0" text="Detail" textFill="#ea4d4d">
+         <font>
+            <Font name="Times New Roman" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="btn_actualiser" layoutX="346.0" layoutY="364.0" mnemonicParsing="false" onAction="#Actualiser" text="Actualiser" textFill="#ea4d4d">
+         <font>
+            <Font name="Times New Roman" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="btn_imprimer" layoutX="346.0" layoutY="282.0" mnemonicParsing="false" onAction="#imprime" prefHeight="25.0" prefWidth="78.0" text="imprimer" textFill="#dd3939">
+         <font>
+            <Font name="Times New Roman" size="14.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="547.0" prefWidth="200.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pidev.ui.DrawerAcceuilAdminController">
+   <children>
+      <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@patiss.jpg" />
+         </image>
+      </ImageView>
+      <VBox prefHeight="168.0" prefWidth="200.0" />
+      <JFXButton fx:id="gr" accessibleText="gestionrecettesbtn" onAction="#gererr" prefHeight="60.0" prefWidth="203.0" style="-fx-border-color: gray;" text="Gestion recettes">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="gestionR" accessibleText="gestionreclamationsbtn" onAction="#afficherR" prefHeight="60.0" prefWidth="203.0" text="Gestion reclamations">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="deconnexion" accessibleText="deconnexionbtn" onAction="#DeconnexionA" prefHeight="60.0" prefWidth="203.0" text="Deconnexion">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </JFXButton>
+   </children>
+</VBox>

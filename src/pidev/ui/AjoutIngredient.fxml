@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="567.0" prefWidth="780.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pidev.ui.AjoutIngredientController">
+   <children>
+      <Label fx:id="code_Event" layoutX="684.0" layoutY="51.0" opacity="0.0" text="Label" />
+      <Text fx:id="text" fill="#ea4d4d" layoutX="31.0" layoutY="175.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="258.936767578125">
+         <font>
+            <Font name="Times New Roman" size="12.0" />
+         </font></Text>
+      <TextArea fx:id="tf_quantite" layoutX="45.0" layoutY="472.0" prefHeight="69.0" prefWidth="149.0" />
+      <Button fx:id="Commenter" layoutX="650.0" layoutY="453.0" mnemonicParsing="false" onAction="#Ajout_ing" prefHeight="39.0" prefWidth="97.0" text="ajouter_ing" textFill="#ea4d4d">
+         <font>
+            <Font name="Times New Roman" size="14.0" />
+         </font></Button>
+      <TextField fx:id="tf_noming" layoutX="45.0" layoutY="428.0" />
+      <Label layoutX="215.0" layoutY="432.0" text="Nom Ingredient :" textFill="#ea4d4d">
+         <font>
+            <Font name="Times New Roman" size="14.0" />
+         </font></Label>
+      <Label layoutX="215.0" layoutY="498.0" text="Quantite :" textFill="#ea4d4d">
+         <font>
+            <Font name="Times New Roman" size="14.0" />
+         </font></Label>
+      <TableView fx:id="table_ing" layoutX="31.0" layoutY="204.0" prefHeight="181.0" prefWidth="297.0">
+        <columns>
+          <TableColumn fx:id="nom_ing" prefWidth="92.0" text="Nom_ing" />
+          <TableColumn fx:id="q" prefWidth="136.0" text="Quantite" />
+            <TableColumn fx:id="id_utilisateur" prefWidth="88.0" text="id_utilisateur" visible="false" />
+            <TableColumn fx:id="id_ing" prefWidth="75.0" text="id_ing" visible="false" />
+            <TableColumn fx:id="id" prefWidth="75.0" text="id" visible="false" />
+        </columns>
+      </TableView>
+      <Button fx:id="retour" layoutX="657.0" layoutY="507.0" mnemonicParsing="false" onAction="#retourToRecette" prefHeight="39.0" prefWidth="83.0" text="retour" textFill="#ea4d4d">
+         <font>
+            <Font name="Times New Roman" size="14.0" />
+         </font></Button>
+      <Button fx:id="btn_supp" layoutX="628.0" layoutY="419.0" mnemonicParsing="false" onAction="#SupprimerIngrédient" text="Supprimer ingrédient" textFill="#ea4d4d">
+         <font>
+            <Font name="Times New Roman" size="14.0" />
+         </font></Button>
+      <Pane layoutY="-1.0" prefHeight="121.0" prefWidth="780.0" style="-fx-background-color: #b80f6f;">
+         <children>
+            <Label layoutX="269.0" layoutY="47.0" prefHeight="28.0" prefWidth="201.0" text="Ingrédient Recette" textFill="#f8f6f6">
+               <font>
+                  <Font name="Times New Roman" size="24.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="121.0" fitWidth="141.0" layoutX="633.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../pidev/images/LogoPIDEV.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="btnHome" layoutX="53.0" layoutY="51.0" mnemonicParsing="false" onAction="#retour" style="-fx-background-color: #FFFFFF;">
+               <graphic>
+                  <ImageView fitHeight="41.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Images/exit.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </Pane>
+      <Button fx:id="btn_modif_ing" layoutX="666.0" layoutY="373.0" mnemonicParsing="false" onAction="#ModifierIngedient" text="Modifier" textFill="#ea4d4d">
+         <font>
+            <Font name="Times New Roman" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="pa_modifier" layoutX="351.0" layoutY="361.0" mnemonicParsing="false" onAction="#SetTextfield" prefHeight="26.0" prefWidth="78.0" text="Detail" textFill="#ea4d4d">
+         <font>
+            <Font name="Times New Roman" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="btn_actualiser" layoutX="351.0" layoutY="407.0" mnemonicParsing="false" onAction="#Actualiser" text="Actualiser" textFill="#ea4d4d">
+         <font>
+            <Font name="Times New Roman" size="14.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

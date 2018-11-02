@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.media.MediaView?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="848.0" prefWidth="1349.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pidev.ui.JfeonixController">
+   <children>
+      <MediaView fx:id="media" fitHeight="700.0" fitWidth="700.0" layoutX="110.0" layoutY="111.0" onMouseClicked="#videoplayer" />
+      <Text fill="SALMON" layoutX="96.0" layoutY="79.0" strokeType="OUTSIDE" strokeWidth="0.0" text="LA PATISSERIE EST UNE AFFAIRE DE LUXE" wrappingWidth="306.3798828125">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font>
+      </Text>
+      <Button fx:id="btnretvid" layoutX="495.0" layoutY="57.0" mnemonicParsing="false" onAction="#btnretvid" style="-fx-background-color: salmon; -fx-background-radius: 40;" text="RETOUR" textFill="WHITE">
+         <font>
+            <Font name="System Italic" size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnwebv" layoutX="642.0" layoutY="57.0" mnemonicParsing="false" onAction="#btnweb" prefHeight="31.0" prefWidth="181.0" style="-fx-background-color: salmon; -fx-background-radius: 40;" text="Acceder au site web" textFill="WHITE">
+         <font>
+            <Font name="System Italic" size="15.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.media.MediaView?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pidev.ui.VideoPlayerFXMLController">
+   <children>
+      <MediaView fx:id="E_media_view" fitHeight="200.0" fitWidth="300.0" />
+      <Button fx:id="E_play_video" layoutX="74.0" layoutY="364.0" mnemonicParsing="false" onAction="#play_video" text="Play" />
+      <Button fx:id="E_stop_video" layoutX="119.0" layoutY="364.0" mnemonicParsing="false" onAction="#stop_video" text="Stop" />
+   </children>
+</AnchorPane>

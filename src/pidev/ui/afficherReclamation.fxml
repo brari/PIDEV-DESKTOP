@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="pane" prefHeight="619.0" prefWidth="776.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pidev.ui.AfficherReclamationController">
+   <children>
+      <TableView fx:id="tb_reclamation" layoutY="61.0" prefHeight="319.0" prefWidth="625.0">
+        <columns>
+          <TableColumn fx:id="cl_type" minWidth="6.0" prefWidth="131.0" text="type" />
+            <TableColumn fx:id="cl_date" prefWidth="160.0" text="date de reclamation" />
+            <TableColumn fx:id="cl_objet" prefWidth="155.0" text="objet" />
+            <TableColumn fx:id="cl_contenu" prefWidth="178.0" text="contenu" />
+        </columns>
+      </TableView>
+      <JFXButton fx:id="btn_afficher" layoutX="404.0" layoutY="410.0" prefHeight="43.0" prefWidth="123.0" style="-fx-border-color: gray; -fx-border-radius: 90;" text="Afficher">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btn_supprimer" layoutX="92.0" layoutY="410.0" onAction="#delete" prefHeight="43.0" prefWidth="123.0" style="-fx-border-color: gray; -fx-border-radius: 90;" text="Supprimer">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btn_retour" layoutX="251.0" layoutY="504.0" onAction="#Retour" prefHeight="43.0" prefWidth="123.0" style="-fx-border-color: gray; -fx-border-radius: 90;" text="Retour">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXDrawer?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="598.0" prefWidth="1139.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pidev.ui.AfficherProduitPatissierFXMLController">
+   <left>
+      <JFXDrawer prefHeight="546.0" prefWidth="153.0" BorderPane.alignment="CENTER" />
+   </left>
+   <center>
+      <AnchorPane fx:id="pane1" prefHeight="656.0" prefWidth="825.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="35.0" layoutY="17.0" text="Le Coin Patissier: A la rencontre de vos saveurs" textFill="#2f66f2">
+               <font>
+                  <Font name="Algerian" size="18.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="84.0" fitWidth="155.0" layoutX="590.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/patiss.jpg" />
+               </image>
+            </ImageView>
+            <Button fx:id="modif" layoutX="578.0" layoutY="490.0" mnemonicParsing="false" onAction="#modif" prefHeight="38.0" prefWidth="127.0" style="-fx-background-color: DARKSALMON; -fx-background-radius: 40;" text="Modifier Produit" textFill="WHITE" />
+            <Button fx:id="supp" layoutX="577.0" layoutY="539.0" mnemonicParsing="false" onAction="#supp" prefHeight="35.0" prefWidth="136.0" style="-fx-background-color: DARKSALMON; -fx-background-radius: 40;" text="Supprimer Produit" textFill="WHITE" />
+            <TableView fx:id="TVP" layoutX="3.0" layoutY="148.0" prefHeight="436.0" prefWidth="533.0">
+              <columns>
+                <TableColumn fx:id="nom" prefWidth="86.0" text="NOM" />
+                <TableColumn fx:id="prix" prefWidth="82.0" text="PRIX" />
+                  <TableColumn fx:id="cat" prefWidth="133.0" text="CATEGORIE" />
+                  <TableColumn fx:id="det" prefWidth="103.0" text="DETAILS" />
+                  <TableColumn fx:id="name" prefWidth="140.0" text="NOM PATISSERIE" />
+              </columns>
+            </TableView>
+            <Text fx:id="filtrer" fill="#c4187d" layoutX="3.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Choisissez un filtre :" wrappingWidth="182.99999392032623">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <ComboBox fx:id="comboprF" layoutX="193.0" layoutY="46.0" prefHeight="25.0" prefWidth="129.0" promptText="Filtrer" />
+            <TextField fx:id="prRecherche" layoutX="338.0" layoutY="46.0" prefHeight="26.0" prefWidth="129.0" />
+            <Button fx:id="BtnFiltrer" layoutX="75.0" layoutY="86.0" mnemonicParsing="false" onAction="#Filtrer" prefHeight="44.0" prefWidth="118.0" style="-fx-background-radius: 40; -fx-background-color: DARKSALMON;" text="Filtrer" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="refrech" layoutX="205.0" layoutY="86.0" mnemonicParsing="false" onAction="#Refrech" prefHeight="44.0" prefWidth="118.0" style="-fx-background-radius: 40; -fx-background-color: DARKSALMON;" text="Refrech" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Label layoutX="587.0" layoutY="279.0" prefHeight="41.0" prefWidth="117.0" text="Nom du Produit" />
+            <Label layoutX="587.0" layoutY="313.0" prefHeight="41.0" prefWidth="117.0" text="Prix du Produit" />
+            <Label layoutX="587.0" layoutY="375.0" prefHeight="41.0" prefWidth="117.0" text="Details du Produit" />
+            <Label layoutX="583.0" layoutY="346.0" prefHeight="41.0" prefWidth="117.0" text="Categorie du Produit" />
+            <Label layoutX="587.0" layoutY="408.0" prefHeight="41.0" prefWidth="117.0" text="Nom de la patisserie" />
+            <TextField fx:id="modnom" layoutX="731.0" layoutY="287.0" />
+            <TextField fx:id="modprix" layoutX="731.0" layoutY="321.0" />
+            <TextField fx:id="modcat" layoutX="731.0" layoutY="354.0" />
+            <TextField fx:id="moddet" layoutX="731.0" layoutY="383.0" />
+            <TextField fx:id="modname" layoutX="731.0" layoutY="416.0" />
+            <Label layoutX="598.0" layoutY="440.0" prefHeight="41.0" prefWidth="117.0" text="Image du Produit" />
+            <TextField fx:id="modimg" layoutX="734.0" layoutY="448.0" />
+            <Button fx:id="ParcModPr" layoutX="886.0" layoutY="441.0" mnemonicParsing="false" onAction="#FileSelected" prefHeight="39.0" prefWidth="86.0" style="-fx-background-color: DARKCYAN; -fx-background-radius: 40;" text="Parcourir" textFill="#0bd2d9">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="SauvgarderMod" layoutX="746.0" layoutY="490.0" mnemonicParsing="false" onAction="#Sauvegarder" prefHeight="39.0" prefWidth="162.0" style="-fx-background-color: DARKCYAN; -fx-background-radius: 40;" text="Sauvegarder" textFill="#0bd2d9">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnpdf" layoutX="724.0" layoutY="539.0" mnemonicParsing="false" onAction="#btnpdf" prefHeight="42.0" prefWidth="235.0" style="-fx-background-color: DARKSALMON; -fx-background-radius: 40;" text="Ajouter Document des Produits" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <ImageView fx:id="pa_icone" fitHeight="150.0" fitWidth="200.0" layoutX="577.0" layoutY="119.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

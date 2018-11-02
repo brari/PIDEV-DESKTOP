@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="592.0" prefWidth="781.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pidev.ui.CommentController">
+   <children>
+      <TableView fx:id="tab_commentaireEvent" layoutX="29.0" layoutY="111.0" prefHeight="346.0" prefWidth="519.0">
+         <columns>
+            <TableColumn fx:id="id_utilisateur" prefWidth="63.999961853027344" text="id_utilisateur" visible="false" />
+            <TableColumn fx:id="id" prefWidth="60.00006103515625" text="id" visible="false" />
+            <TableColumn fx:id="comment" prefWidth="420.80001068115234" text="Comment" />
+            <TableColumn fx:id="date" minWidth="0.0" prefWidth="96.00003051757812" text="date" />
+            <TableColumn fx:id="id_comment" minWidth="0.0" prefWidth="122.39998779296877" text="id_comment" visible="false" />
+         </columns>
+      </TableView>
+      <Button fx:id="btn_SuppComment" layoutX="653.0" layoutY="407.0" mnemonicParsing="false" onAction="#supprimer_commentEvent" prefHeight="39.0" prefWidth="97.0" text="supprimer" textFill="#d672b3" />
+      <Button fx:id="Commenter" layoutX="653.0" layoutY="473.0" mnemonicParsing="false" onAction="#Commenter" prefHeight="39.0" prefWidth="97.0" text="Commenter" textFill="#d672b3" />
+      <Button fx:id="retour" layoutX="660.0" layoutY="533.0" mnemonicParsing="false" onAction="#retourToEvent" prefHeight="39.0" prefWidth="83.0" text="retour" textFill="#d672b3" />
+      <TextArea fx:id="tf_comment" layoutX="35.0" layoutY="492.0" prefHeight="69.0" prefWidth="591.0" />
+      <Text fx:id="text" fill="#d672b3" layoutX="192.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="258.936767578125" />
+      <Label layoutX="70.0" layoutY="50.0" prefHeight="39.0" prefWidth="127.0" text="Recette" textFill="#d672b3">
+         <font>
+            <Font name="Times New Roman" size="27.0" />
+         </font>
+      </Label>
+      <Label fx:id="code_Event" layoutX="674.0" layoutY="71.0" opacity="0.0" text="Label" />
+      <Button fx:id="btn_modif_comment" layoutX="653.0" layoutY="353.0" mnemonicParsing="false" onAction="#Modifier_CommentEvent" prefHeight="32.0" prefWidth="97.0" text="Modifier" textFill="#d672b3" />
+   </children>
+</AnchorPane>

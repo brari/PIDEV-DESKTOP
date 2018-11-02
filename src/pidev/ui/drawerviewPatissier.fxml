@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="465.0" prefWidth="201.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pidev.ui.DrawerviewPatissierController">
+   <children>
+      <ImageView fitHeight="142.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/patiss.jpg" />
+         </image>
+      </ImageView>
+      <VBox prefHeight="145.0" prefWidth="201.0" />
+      <JFXButton prefHeight="47.0" prefWidth="201.0" text="Mon Compte" />
+      <JFXButton fx:id="listePat" onAction="#AfficherPat" prefHeight="41.0" prefWidth="206.0" text="Les Patisseries" />
+      <JFXButton prefHeight="41.0" prefWidth="206.0" text="Les Commandes" />
+      <JFXButton prefHeight="41.0" prefWidth="206.0" text="Les Commentaires" />
+      <JFXButton prefHeight="39.0" prefWidth="201.0" text="Les Reclamations" />
+      <JFXButton prefHeight="50.0" prefWidth="201.0" text="Deconnexion" />
+   </children>
+</VBox>

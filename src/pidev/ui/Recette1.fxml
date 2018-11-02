@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Label?>
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="504.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pidev.ui.Recette1Controller">
+   <children>
+      <TableView fx:id="tab_declaration" layoutX="21.0" layoutY="252.0" prefHeight="200.0" prefWidth="438.0">
+        <columns>
+          <TableColumn fx:id="id" prefWidth="75.0" text="id" />
+          <TableColumn fx:id="nom" prefWidth="75.0" text="nom" />
+            <TableColumn fx:id="description" prefWidth="75.0" text="desription" />
+            <TableColumn fx:id="etat" prefWidth="75.0" text="etat" />
+            <TableColumn fx:id="action" prefWidth="75.0" text="action" />
+            <TableColumn fx:id="date" prefWidth="75.0" text="date" />
+        </columns>
+      </TableView>
+      <Button fx:id="btn_accepter" layoutX="467.0" layoutY="304.0" mnemonicParsing="false" onAction="#accepter" prefHeight="25.0" prefWidth="70.0" text="accepter" textFill="#ea4d4d" />
+      <Button fx:id="btn_traiter" layoutX="467.0" layoutY="340.0" mnemonicParsing="false" onAction="#traiter" prefHeight="25.0" prefWidth="70.0" text="traiter" textFill="#ea4d4d" />
+      <Button fx:id="btn_supp" layoutX="467.0" layoutY="380.0" mnemonicParsing="false" onAction="#Surpprimer" text="supprimer" textFill="#ea4d4d" />
+      <Button fx:id="notif" layoutX="530.0" layoutY="181.0" mnemonicParsing="false" onAction="#get_notif" prefHeight="25.0" prefWidth="42.0" text="Button" visible="false" />
+      <Button fx:id="Historique" layoutX="467.0" layoutY="420.0" mnemonicParsing="false" onAction="#Consulter_Historique" text="historique" textFill="#ea4d4d" />
+      <Label fx:id="nb_notif" layoutX="537.0" layoutY="174.0" text="0" textFill="#ea4d4d" />
+      <FontAwesomeIcon fill="#ab2151" iconName="BELL" layoutX="540.0" layoutY="201.0" size="1.8em" />
+      <Pane prefHeight="121.0" prefWidth="780.0" style="-fx-background-color: #b80f6f;">
+         <children>
+            <ImageView fitHeight="121.0" fitWidth="141.0" layoutX="633.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../pidev/images/LogoPIDEV.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="btnHome" layoutX="53.0" layoutY="51.0" mnemonicParsing="false" onAction="#retour" style="-fx-background-color: #FFFFFF;">
+               <graphic>
+                  <ImageView fitHeight="41.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Images/exit.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </Pane>
+      <Button fx:id="btn_chart" layoutX="619.0" layoutY="304.0" mnemonicParsing="false" onAction="#stat" text="chart" />
+      <TextField fx:id="id_txt" layoutX="619.0" layoutY="340.0" prefHeight="25.0" prefWidth="43.0" />
+      <TextField fx:id="id_nom_rec" layoutX="619.0" layoutY="380.0" prefHeight="25.0" prefWidth="42.0" />
+      <Button fx:id="btn_stat" layoutX="615.0" layoutY="433.0" mnemonicParsing="false" text="stat" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="595.0" prefWidth="873.0" style="-fx-background-color: WHITE;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pidev.ui.InscriptionController">
+   <children>
+      <JFXTextField fx:id="nom" labelFloat="true" layoutX="55.0" layoutY="124.0" prefHeight="30.0" prefWidth="185.0" promptText="Nom">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXTextField>
+      <Label alignment="TOP_CENTER" layoutX="409.0" layoutY="30.0" prefHeight="35.0" prefWidth="167.0" text="INSCRIPTION" textFill="#bd0826">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Separator layoutX="309.0" layoutY="84.0" prefHeight="0.0" prefWidth="391.0" style="-fx-background-color: #bd0826;" />
+      <JFXTextField fx:id="prenom" labelFloat="true" layoutX="55.0" layoutY="203.0" prefHeight="30.0" prefWidth="185.0" promptText="Prenom">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="mail" labelFloat="true" layoutX="55.0" layoutY="281.0" prefHeight="25.0" prefWidth="185.0" promptText="Email">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="mobile" labelFloat="true" layoutX="418.0" layoutY="124.0" prefHeight="30.0" prefWidth="185.0" promptText="Mobile">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="adresse" labelFloat="true" layoutX="418.0" layoutY="210.0" prefHeight="25.0" prefWidth="185.0" promptText="Adresse">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXTextField>
+      <Text layoutX="418.0" layoutY="316.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vous inscrivez en tant que :" wrappingWidth="173.13671875">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Button layoutX="419.0" layoutY="515.0" mnemonicParsing="false" onMouseClicked="#add" prefHeight="41.0" prefWidth="130.0" style="-fx-background-color: #bd0826; -fx-background-radius: 100;" text="S'inscrire" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="retour" layoutX="573.0" layoutY="515.0" mnemonicParsing="false" onMouseClicked="#annuler" prefHeight="41.0" prefWidth="130.0" style="-fx-background-color: #bd0826; -fx-background-radius: 100;" text="Retour" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <ImageView fx:id="img" fitHeight="150.0" fitWidth="200.0" layoutX="661.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" />
+      <Button fx:id="importer" layoutX="686.0" layoutY="158.0" mnemonicParsing="false" onAction="#parcourir" style="-fx-background-radius: 100; -fx-background-color: #bd0826;" text="IMPORTER VOTRE IMAGE" textFill="WHITE" />
+      <JFXTextField fx:id="nom1" focusColor="WHITE" layoutX="695.0" layoutY="191.0" style="-fx-background-color: WHITE;" unFocusColor="WHITE" />
+      <Text layoutX="418.0" layoutY="359.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Si vous etes un patissier,importer votre attestation :">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Button fx:id="pdf" layoutX="418.0" layoutY="394.0" mnemonicParsing="false" onMouseClicked="#addpdf" style="-fx-background-color: #bd0826; -fx-background-radius: 100;" text="Attestation.pdf" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Label fx:id="firstname_er_label" layoutX="55.0" layoutY="170.0" prefHeight="17.0" prefWidth="173.0" />
+      <Label fx:id="lastname_er_label" layoutX="55.0" layoutY="254.0" prefHeight="17.0" prefWidth="185.0" />
+      <Label fx:id="email_er_label" layoutX="55.0" layoutY="335.0" prefHeight="17.0" prefWidth="185.0" />
+      <Label fx:id="password_er_label" layoutX="55.0" layoutY="416.0" prefHeight="17.0" prefWidth="185.0" />
+      <Label fx:id="lab" layoutX="55.0" layoutY="498.0" prefHeight="17.0" prefWidth="185.0" />
+      <Label fx:id="tel_er_label" layoutX="423.0" layoutY="182.0" prefHeight="17.0" prefWidth="185.0" />
+      <JFXPasswordField fx:id="password" labelFloat="true" layoutX="55.0" layoutY="363.0" prefHeight="25.0" prefWidth="185.0" promptText="Mot De Passe">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXPasswordField>
+      <JFXPasswordField fx:id="Confirmer" labelFloat="true" layoutX="55.0" layoutY="456.0" prefHeight="25.0" prefWidth="185.0" promptText="Confirmer Mot De Passe">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXPasswordField>
+      <ComboBox fx:id="role" layoutX="603.0" layoutY="298.0" prefWidth="150.0" />
+      <Label fx:id="nom2" layoutX="577.0" layoutY="393.0" prefHeight="25.0" prefWidth="135.0" textFill="WHITE" />
+   </children>
+</AnchorPane>
