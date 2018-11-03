@@ -19,7 +19,7 @@ public class MyDB {
         final String login="root";
         final String mdp="";
         Connection connexion;
-        static MyDB instance;
+        private static MyDB instance;
         
         
         /// Private Constructor

@@ -20,7 +20,7 @@
    <center>
       <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
-            <ListView fx:id="listview" layoutX="32.0" layoutY="121.0" prefHeight="518.0" prefWidth="463.0" />
+            <ListView fx:id="listview" layoutX="32.0" layoutY="121.0" prefHeight="518.0" prefWidth="514.0" />
             <Label layoutX="52.0" layoutY="25.0" text="Le Coin Patissier: A la rencontre de vos saveurs" textFill="#2f66f2">
                <font>
                   <Font name="Algerian" size="18.0" />
