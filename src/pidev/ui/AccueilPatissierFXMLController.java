@@ -240,7 +240,7 @@ String path = "";   Patisserie pat;
                                 pa_icone.setImage(null);
 
                                 try {
-                                    ArrayList<Patisserie> patisseries = (ArrayList< Patisserie>) ps.afficherPatisseries();
+                                    ArrayList<Patisserie> patisseries = (ArrayList< Patisserie>) ps.afficherMesPatisseries(ConnexionFXMLController.session.getUser_id());
                                     ObservableList items = FXCollections.observableArrayList(patisseries);
                                     listview.setCellFactory((param) -> new CellPersonalise());
                                     listview.setItems(items);
@@ -310,7 +310,7 @@ String path = "";   Patisserie pat;
                         try {
                             ps.suprimerPatisserie(pat.getIdp());
                             try {
-                                ArrayList<Patisserie> patisseries = (ArrayList< Patisserie>) ps.afficherPatisseries();
+                                ArrayList<Patisserie> patisseries = (ArrayList< Patisserie>) ps.afficherMesPatisseries(ConnexionFXMLController.session.getUser_id());
                                 ObservableList items = FXCollections.observableArrayList(patisseries);
                                 listview.setCellFactory((param) -> new CellPersonalise());
                                 listview.setItems(items);
