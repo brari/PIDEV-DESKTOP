@@ -28,22 +28,22 @@ public class Usersession {
                 
                  public void add_session(String s)throws SQLException {
         
-          String req="Select * from users where First_name='"+s+"';";
+          String req="Select * from user where nom ='"+s+"';";
+                   
           Statement stm=connection.createStatement();
           ResultSet rs=stm.executeQuery(req); 
+                          
         String requete="INSERT INTO `session`(`first_name`, `last_name`,`user_roles`,`email`,`id`) VALUES (?,?,?,?,?);";
          PreparedStatement ps= connection.prepareStatement(requete);
                     
                 ps.setString(1,s);
                 while(rs.next()){
-         ps.setString(2, rs.getString("Last_name"));
-         ps.setString(3, rs.getString("gender"));
+         ps.setString(2, rs.getString("prenom"));
+         ps.setString(3, rs.getString("roles"));
          ps.setString(4, rs.getString("email"));
-         ps.setInt(5, rs.getInt("idU"));
+         ps.setInt(5, rs.getInt("id"));
                 }
-        
-        
-     
+      
          ps.executeUpdate();
         
     }
@@ -54,12 +54,12 @@ public class Usersession {
         stm.executeUpdate(re);				
 }
       public String getIdSession() throws SQLException{
-        String re= "select u.First_name from users u inner join session s where u.idU=s.id";;
+        String re= "select u.nom from user u inner join session s where u.id=s.id";;
         Statement stm= connection.createStatement();
         ResultSet rst=stm.executeQuery(re);
         
         while(rst.next()){
-            return rst.getString("First_name");
+            return rst.getString("nom");
             
         }
 	

@@ -15,7 +15,7 @@ import java.sql.SQLException;
  */
 public class MyDB {
           /// Attributs
-        final String url="jdbc:mysql://localhost/patisserie";
+        final String url="jdbc:mysql://localhost/patisserie2";
         final String login="root";
         final String mdp="";
         Connection connexion;

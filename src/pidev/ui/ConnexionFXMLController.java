@@ -127,7 +127,8 @@ public class ConnexionFXMLController implements Initializable {
                 
                    if(us.chercheruser(username_login.getText(),password_login.getText()))
                     {if(u.getEnabled()==1){
-                        if("Patissier".equals(us.avoirRole(username_login.getText(),password_login.getText())))
+                                System.out.println("hvhvhhhhhhhhhhh     "+u.getGender());
+                        if("a:1:{i:0;s:14:\"ROLE_PATISSIER\";}".equals(us.avoirRole(username_login.getText(),password_login.getText())))
                            {
                                session=us.cherchNom(username_login.getText());
                                TrayNotification tr3 = new TrayNotification();
@@ -144,7 +145,7 @@ public class ConnexionFXMLController implements Initializable {
                                usa.add_session(username_login.getText());  
                                 
                            }
-                         else if("Client".equals(us.avoirRole(username_login.getText(),password_login.getText())))
+                         else if("a:1:{i:0;s:11:\"ROLE_CLIENT\";}".equals(us.avoirRole(username_login.getText(),password_login.getText())))
                             {   
                                 session=us.cherchNom(username_login.getText());
                                 

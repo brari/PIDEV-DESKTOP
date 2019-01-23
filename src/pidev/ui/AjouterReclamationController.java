@@ -83,6 +83,7 @@ public class AjouterReclamationController implements Initializable {
         String message = "You've successfully sended your reclamation";
           Reclamation r = new Reclamation(combobox.getValue(),tx_objet.getText(),tx_contenu.getText());
               ReclamationService rs = new ReclamationService();
+             // r.setId_reclamant(ConnexionFXMLController.session.getUser_id());
                  NotificationType notification = NotificationType.SUCCESS;
                 TrayNotification tray = new TrayNotification();
                 EnvoyerEmail test = new EnvoyerEmail();

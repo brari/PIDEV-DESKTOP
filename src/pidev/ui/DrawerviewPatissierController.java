@@ -32,6 +32,8 @@ public class DrawerviewPatissierController implements Initializable {
     private JFXButton cmpt;
     @FXML
     private JFXButton btn;
+    @FXML
+    private JFXButton ListEven;
 
     /**
      * Initializes the controller class.
@@ -80,6 +82,24 @@ public class DrawerviewPatissierController implements Initializable {
                 } catch (IOException ex) {
                     Logger.getLogger(AccueilPatissierFXMLController.class.getName()).log(Level.SEVERE, null, ex);
                 }
+    }
+
+    @FXML
+    private void AfficherEven(ActionEvent event) {
+        ListEven.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("./AfficheEvenementPatissierFXML.fxml"));
+                Parent root;
+                try {
+                    root = loader.load();
+                    ListEven.getScene().setRoot(root);
+                } catch (IOException ex) {
+                    Logger.getLogger(AccueilPatissierFXMLController.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            }
+        });
+        
     }
     
 }

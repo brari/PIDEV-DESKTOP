@@ -80,7 +80,6 @@
          <font>
             <Font name="Times New Roman" size="14.0" />
          </font></Button>
-      <Button fx:id="btnHome" layoutX="63.0" layoutY="61.0" mnemonicParsing="false" onAction="#retour" style="-fx-background-color: #FFFFFF;" />
       <Label layoutX="279.0" layoutY="57.0" prefHeight="28.0" prefWidth="201.0" text="Ingrédient Recette" textFill="#f8f6f6">
          <font>
             <Font name="Times New Roman" size="24.0" />
@@ -113,5 +112,10 @@
          <font>
             <Font name="Times New Roman" size="14.0" />
          </font></Button>
+      <Button fx:id="retour" layoutX="479.0" layoutY="448.0" mnemonicParsing="false" onAction="#retourToRecette" prefHeight="39.0" prefWidth="83.0" text="retour" textFill="#ea4d4d">
+         <font>
+            <Font name="Times New Roman" size="14.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>

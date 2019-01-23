@@ -108,13 +108,20 @@ public class InscriptionController implements Initializable {
 
     @FXML
     private void add(MouseEvent event) throws SQLException {
-        String gender=role.getValue();
+        String gend=role.getValue();
+        String gender="";
+        if(gend.equalsIgnoreCase("Patissier"))
+        
+            { gender="a:1:{i:0;s:14:\"ROLE_PATISSIER\";}";}
+            else if (gend.equalsIgnoreCase("Client"))
+                {gender="a:1:{i:0;s:11:\"ROLE_CLIENT\";}";}
+        
          if((validatefirstname())&&(validatepassword())&&(validatelastname())&&(validateNumTel())&&(validateEmail()))
          {Users u =new Users(nom.getText(),
                  prenom.getText(),
                  mail.getText(),password.getText(),
                  Integer.parseInt(mobile.getText()),
-                 adresse.getText(),gender,nom1.getText(),0,nom2.getText());
+                 adresse.getText(),gender,nom1.getText(),1,nom2.getText());
         Userservice us= new Userservice();
         
              u.setFirst_name(nom.getText());
@@ -123,7 +130,7 @@ public class InscriptionController implements Initializable {
 				tr2.setAnimationType(AnimationType.POPUP);
 				tr2.setTitle("Inscription");
 				tr2.setNotificationType(NotificationType.SUCCESS);
-				tr2.setMessage("Inscription effectue.\n En attente de confirmation de l'admin");
+				tr2.setMessage("Inscription effectue.Bienvenue dans notre application");
 				tr2.showAndDismiss(Duration.seconds(3));
                                 nom.clear();prenom.clear();mail.clear();
                                 mobile.clear();adresse.clear();nom1.clear();

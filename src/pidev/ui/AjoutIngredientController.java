@@ -222,6 +222,20 @@ public Label getCode_Event() {
     }
     @FXML
     private void retourToRecette(ActionEvent event) {
+        
+       FXMLLoader loader= new FXMLLoader(getClass().getResource("./AfficheRecette.fxml"));
+                    Parent root;
+                    try 
+                    {
+                      root=loader.load();
+                     retour.getScene().setRoot(root);
+                    }
+                    catch (IOException ex) 
+                    {
+                        Logger.getLogger(DrawerviewClientMenuController.class.getName()).log(Level.SEVERE, null, ex);
+                    }   
+        
+        
     }
 
     @FXML

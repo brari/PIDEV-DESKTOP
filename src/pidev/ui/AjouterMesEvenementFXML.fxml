@@ -10,16 +10,16 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" prefHeight="657.0" prefWidth="870.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pidev.ui.AjouterMesEvenementFXMLController">
+<AnchorPane id="AnchorPane" prefHeight="657.0" prefWidth="870.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pidev.ui.AjouterMesEvenementFXMLController">
    <children>
       <Text fill="#b5125e" fontSmoothingType="LCD" layoutX="194.0" layoutY="86.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ajouter un évènement">
          <font>
             <Font name="Calibri Italic" size="45.0" />
          </font>
       </Text>
-      <ImageView fx:id="logo" fitHeight="150.0" fitWidth="230.0" layoutX="640.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="logo" fitHeight="150.0" fitWidth="230.0" layoutX="679.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../projetPI/src/pidev/images/patiss.jpg" />
+            <Image url="@patiss.jpg" />
          </image>
       </ImageView>
       <Label layoutX="29.0" layoutY="156.0" text="Veuillez remplir les champs:" textFill="#461ebd">
@@ -27,50 +27,62 @@
             <Font name="Arial Bold" size="18.0" />
          </font>
       </Label>
-      <TextField id="E_nome_entry" fx:id="E_nom_entry" layoutX="130.0" layoutY="215.0" prefHeight="42.0" prefWidth="200.0" />
-      <Label layoutX="29.0" layoutY="223.0" prefHeight="26.0" prefWidth="57.0" text="Nom:" textFill="#de128e">
+      <TextField id="E_nome_entry" fx:id="E_nom_entry" layoutX="119.0" layoutY="194.0" prefHeight="42.0" prefWidth="200.0" />
+      <Label layoutX="24.0" layoutY="202.0" prefHeight="26.0" prefWidth="57.0" text="Nom:" textFill="#de128e">
          <font>
             <Font size="16.0" />
          </font>
       </Label>
-      <Label layoutX="28.0" layoutY="293.0" prefHeight="27.0" prefWidth="102.0" text="Description:" textFill="#de128e">
+      <Label layoutX="2.0" layoutY="269.0" prefHeight="27.0" prefWidth="102.0" text="Description:" textFill="#de128e">
          <font>
             <Font size="16.0" />
          </font>
       </Label>
-      <Label layoutX="28.0" layoutY="357.0" prefHeight="27.0" prefWidth="66.0" text="Adresse:" textFill="#de128e">
+      <Label layoutX="14.0" layoutY="329.0" prefHeight="27.0" prefWidth="66.0" text="Adresse:" textFill="#de128e">
          <font>
             <Font size="16.0" />
          </font>
       </Label>
-      <Label layoutX="28.0" layoutY="427.0" prefHeight="27.0" prefWidth="65.0" text="Type_E:" textFill="#de128e">
+      <Label layoutX="15.0" layoutY="387.0" prefHeight="27.0" prefWidth="65.0" text="Type_E:" textFill="#de128e">
          <font>
             <Font size="16.0" />
          </font>
       </Label>
-      <Label layoutX="28.0" layoutY="489.0" prefHeight="34.0" prefWidth="65.0" text="Date_E:" textAlignment="CENTER" textFill="#de128e">
+      <Label layoutX="15.0" layoutY="444.0" prefHeight="34.0" prefWidth="65.0" text="Date_E:" textAlignment="CENTER" textFill="#de128e">
          <font>
             <Font size="16.0" />
          </font>
       </Label>
-      <Label layoutX="24.0" layoutY="550.0" prefHeight="26.0" prefWidth="74.0" text="Image_E:" textFill="#de128e">
+      <Label layoutX="16.0" layoutY="506.0" prefHeight="26.0" prefWidth="74.0" text="Image_E:" textFill="#de128e">
          <font>
             <Font size="16.0" />
          </font>
       </Label>
-      <TextField id="E_descriptione_entry" fx:id="E_description_entry" layoutX="137.0" layoutY="282.0" prefHeight="42.0" prefWidth="200.0" />
-      <TextField id="E_adressee_entry" fx:id="E_adresse_entry" layoutX="137.0" layoutY="350.0" prefHeight="42.0" prefWidth="200.0" />
-      <TextField id="E_image_entry" fx:id="E_type_entry" layoutX="137.0" layoutY="420.0" prefHeight="42.0" prefWidth="200.0" />
-      <DatePicker fx:id="E_date_entry" layoutX="137.0" layoutY="485.0" prefHeight="41.0" prefWidth="200.0" />
-      <TextField fx:id="E_image_entry" layoutX="137.0" layoutY="552.0" prefHeight="42.0" prefWidth="163.0" />
-      <Button fx:id="E_image_button" layoutX="299.0" layoutY="552.0" mnemonicParsing="false" onAction="#choisir_image" prefHeight="42.0" prefWidth="39.0" text="..." />
+      <TextField id="E_descriptione_entry" fx:id="E_description_entry" layoutX="119.0" layoutY="248.0" prefHeight="42.0" prefWidth="200.0" />
+      <TextField id="E_adressee_entry" fx:id="E_adresse_entry" layoutX="119.0" layoutY="308.0" prefHeight="42.0" prefWidth="200.0" />
+      <TextField id="E_image_entry" fx:id="E_type_entry" layoutX="119.0" layoutY="366.0" prefHeight="42.0" prefWidth="200.0" />
+      <DatePicker fx:id="E_date_entry" layoutX="119.0" layoutY="441.0" prefHeight="41.0" prefWidth="200.0" />
+      <TextField fx:id="E_image_entry" layoutX="119.0" layoutY="498.0" prefHeight="42.0" prefWidth="163.0" />
+      <Button fx:id="E_image_button" layoutX="282.0" layoutY="498.0" mnemonicParsing="false" onAction="#choisir_image" prefHeight="42.0" prefWidth="39.0" text="..." />
       <Button fx:id="E_ajout_button" layoutX="640.0" layoutY="400.0" mnemonicParsing="false" onAction="#ajouter_evenement" prefHeight="54.0" prefWidth="200.0" style="-fx-background-color: DARKSALMON; -fx-background-radius: 40;" text="Ajouter évènement">
          <font>
             <Font size="14.0" />
          </font>
       </Button>
       <Button fx:id="E_afficher_pdf" layoutX="644.0" layoutY="478.0" mnemonicParsing="false" onAction="#afficher_pdf" prefHeight="54.0" prefWidth="192.0" style="-fx-background-color: DARKSALMON; -fx-background-radius: 40;" text="Afficher le PDF des évènements" />
-      <ImageView fx:id="E_im_ajout_view" fitHeight="108.0" fitWidth="192.0" layoutX="409.0" layoutY="519.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="E_im_ajout_view" fitHeight="108.0" fitWidth="192.0" layoutX="396.0" layoutY="452.0" pickOnBounds="true" preserveRatio="true" />
       <Label fx:id="E_ajoutmsg_label" layoutX="442.0" layoutY="230.0" prefHeight="73.0" prefWidth="279.0" text="Label" />
+      <TextField fx:id="E_interesses_entry" layoutX="119.0" layoutY="558.0" prefHeight="31.0" prefWidth="200.0" />
+      <TextField fx:id="E_capacite_entry" layoutX="119.0" layoutY="603.0" prefHeight="31.0" prefWidth="200.0" />
+      <Label layoutX="16.0" layoutY="561.0" text="Interesses:" textFill="#de128e">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="12.0" layoutY="608.0" text="Capacite:" textFill="#de128e">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

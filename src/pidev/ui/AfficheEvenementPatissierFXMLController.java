@@ -218,7 +218,7 @@ public class AfficheEvenementPatissierFXMLController implements Initializable {
                     
                 
                      
-                    FXMLLoader loader= new FXMLLoader(getClass().getResource("./AjoutMesEvenementFXML.fxml"));
+                    FXMLLoader loader= new FXMLLoader(getClass().getResource("./AjouterMesEvenementFXML.fxml"));
                     Parent root;
                     try 
                     {

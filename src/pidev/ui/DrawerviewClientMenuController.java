@@ -106,7 +106,7 @@ public class DrawerviewClientMenuController implements Initializable {
     @FXML
     private void listrec(ActionEvent event) {
         
-        FXMLLoader loader= new FXMLLoader(getClass().getResource("./AfficheRecette_1.fxml"));
+        FXMLLoader loader= new FXMLLoader(getClass().getResource("./AfficheRecette.fxml"));
                     Parent root;
                     try 
                     {

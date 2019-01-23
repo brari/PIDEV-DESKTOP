@@ -33,7 +33,7 @@ public class Evenementservice {
 
     public void ajouter_even(Evenements e) throws SQLException {
         
-           String requete = "INSERT INTO evenements(nom_E,description_E,adresse_E,type_E,date_E,image_E) VALUES (?,?,?,?,?,?)";
+           String requete = "INSERT INTO evenements(nom_E,description_E,adresse_E,type_E,date_E,image_E,interesses,capacite) VALUES (?,?,?,?,?,?,?,?)";
           PreparedStatement pst=connexion.prepareStatement(requete);
           // pst.setInt(1, e.getIdE());
             pst.setString(1, e.getNom_E());
@@ -42,6 +42,8 @@ public class Evenementservice {
             pst.setString(4, e.getType_E());
             pst.setDate(5, (Date)e.getDate_E());
             pst.setString(6, e.getImage_E());
+            pst.setInt(7, e.getInteresses());
+            pst.setInt(8, e.getCapacite());
             pst.executeUpdate();
             
            

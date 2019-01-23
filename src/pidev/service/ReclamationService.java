@@ -36,10 +36,10 @@ public class ReclamationService {
     {
           DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
 LocalDate date = LocalDate.now();
-      String req="INSERT INTO `reclamation` (`type`, `contenu`,`date`,`statut`,`reclamant`,`objet`) VALUES ('" +r.getType()+"', '"+r.getContenu()+"','"+date+"',' en cours ','anouir hmidi','"+r.getObjet()+"')";
+      String req="INSERT INTO `reclamation` (`type`,`contenu`,`date`,`statut`,`id_reclamant`,`objet`) VALUES ('" +r.getType()+"', '"+r.getContenu()+"','"+date+"',' en cours ',1,'"+r.getObjet()+"')";
         //String req1="INSERT INTO 'Product' ('libelle' ,'nom')" +" values (p.getLib(),p.getDesc();";
                 Statement stm= connexion.createStatement();
-                stm.executeUpdate(req);
+                    stm.executeUpdate(req);
     }
       public void supprimerreclamation(int id) throws SQLException {
             PreparedStatement pst = connexion.prepareStatement("DELETE FROM reclamation WHERE id=?");

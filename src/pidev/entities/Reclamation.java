@@ -22,6 +22,22 @@ public class Reclamation {
      private String reclamant;
      private String decision;
      private int id_reclamant;
+
+    public void setObjet(String objet) {
+        this.objet = objet;
+    }
+
+    public void setDecision(String decision) {
+        this.decision = decision;
+    }
+
+    public void setId_reclamant(int id_reclamant) {
+        this.id_reclamant = id_reclamant;
+    }
+
+    public void setId_concerne(int id_concerne) {
+        this.id_concerne = id_concerne;
+    }
        private int id_concerne;
 
     public int getId_concerne() {

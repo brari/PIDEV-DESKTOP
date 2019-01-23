@@ -85,7 +85,9 @@ public class AfficheRecetteController implements Initializable {
     private TableColumn<Recette1, String> desc;
     @FXML
     private TableColumn<Recette1, ?> phot;
+    @FXML
     private TextArea tfDescrecette;
+    @FXML
     private TextField tfNomrecette;
     private ImageView imageView;
     private Image image;
@@ -95,6 +97,7 @@ public class AfficheRecetteController implements Initializable {
     private Stage stage;
     private AnchorPane anchorPane;
     private final Desktop deskTop = Desktop.getDesktop();
+    @FXML
     private Button btn_ajout;
     private Button btn_add;
     @FXML
@@ -108,22 +111,37 @@ public class AfficheRecetteController implements Initializable {
     private TableColumn<Recette1, Integer> id;
     @FXML
     private ImageView pa_icone;
+    @FXML
     private Button pa_browse;
+    @FXML
     private TextField pa_fichierchoisi;
     
      String path="";
      Recette1 pat;
+    @FXML
     private Button pa_modifier;
+    @FXML
     private Button pa_supprimer;
+    @FXML
     private Button pa_saveChanged;
+    @FXML
     private Button btn_ing;
     private Button btn_etape;
+    @FXML
     private Button btn_eta;
+    @FXML
     private Button btnHome;
     @FXML
     private Button btn_imprimer;
-    @FXML
     private Button ret;
+    @FXML
+    private Button btn_clear;
+    @FXML
+    private Button btn_delete;
+    @FXML
+    private Button n_valid;
+    @FXML
+    private Button retour;
     /**
      * Initializes the controller class.
      */
@@ -246,11 +264,13 @@ public class AfficheRecetteController implements Initializable {
         
     }
 
+    @FXML
     private void handleClear(ActionEvent event) {
         
          clearTextField();
     }
 
+    @FXML
     private void insert(ActionEvent event) throws IOException {
         
          FXMLLoader loader =new FXMLLoader(getClass().getResource("./AddRecette.fxml"));
@@ -294,6 +314,7 @@ public class AfficheRecetteController implements Initializable {
     
     
     
+    @FXML
     private void delete(ActionEvent event) throws SQLException  {///it works :)
         
 //        Recette p=(Recette)table.getSelectionModel().getSelectedItems();
@@ -326,6 +347,7 @@ desc.setCellValueFactory(new PropertyValueFactory<Recette1, String>("description
         
     }
 
+    @FXML
     private void valider(ActionEvent event) throws SQLException {
         
     if (tfDescrecette.getText().equals("")) {
@@ -465,6 +487,7 @@ desc.setCellValueFactory(new PropertyValueFactory<Recette1, String>("description
         
     }
 
+    @FXML
     private void FileSelected(ActionEvent event) {
         
         
@@ -497,7 +520,7 @@ desc.setCellValueFactory(new PropertyValueFactory<Recette1, String>("description
         
     }
     
-
+@FXML
     private void Modifierrecccc(ActionEvent event) {
      pa_modifier.setOnAction(new EventHandler<ActionEvent>() {
             @Override
@@ -518,7 +541,7 @@ desc.setCellValueFactory(new PropertyValueFactory<Recette1, String>("description
         
         
     }
-
+  @FXML
     private void SupprimerReccc(ActionEvent event) {
       pa_supprimer.setOnAction(new EventHandler<ActionEvent>() {
             @Override
@@ -567,6 +590,7 @@ desc.setCellValueFactory(new PropertyValueFactory<Recette1, String>("description
         
     }
 
+    @FXML
     private void modif_avectof(ActionEvent event) {
          pa_saveChanged.setOnAction(new EventHandler<ActionEvent>() {
             @Override
@@ -636,6 +660,7 @@ desc.setCellValueFactory(new PropertyValueFactory<Recette1, String>("description
         
     }
 
+    @FXML
     private void Allering(ActionEvent event)  throws SQLException {
         
         Recette1 e= table.getSelectionModel().getSelectedItem();
@@ -676,6 +701,7 @@ desc.setCellValueFactory(new PropertyValueFactory<Recette1, String>("description
         
     }
 
+    @FXML
     private void AllerEt(ActionEvent event)  throws SQLException {
         
          Recette1 e= table.getSelectionModel().getSelectedItem();
@@ -711,18 +737,19 @@ desc.setCellValueFactory(new PropertyValueFactory<Recette1, String>("description
         
     }
 
-    private void retour(ActionEvent event) {
-       FXMLLoader loder = new FXMLLoader(getClass().getResource("./DrawerViewRecetteFXML.fxml"));
-        Parent root = null;
-        try {
-            root = loder.load();
-        } catch (IOException ex) {
-            Logger.getLogger(AjoutIngredientController.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        btnHome.getScene().setRoot(root);  
-        
-        
-    }
+//    @FXML
+//    private void retour(ActionEvent event) {
+//       FXMLLoader loder = new FXMLLoader(getClass().getResource("./DrawerViewRecetteFXML.fxml"));
+//        Parent root = null;
+//        try {
+//            root = loder.load();
+//        } catch (IOException ex) {
+//            Logger.getLogger(AjoutIngredientController.class.getName()).log(Level.SEVERE, null, ex);
+//        }
+//        btnHome.getScene().setRoot(root);  
+//        
+//        
+//    }
 
     @FXML
     private void imprime(ActionEvent event) {
@@ -835,7 +862,6 @@ String d=   dtf.format(now);
         
     }
 
-    @FXML
     private void retourne(ActionEvent event) {
          
         
@@ -850,6 +876,31 @@ String d=   dtf.format(now);
                     {
                         Logger.getLogger(AfficheRecetteController.class.getName()).log(Level.SEVERE, null, ex);
                     }
+    }
+
+    @FXML
+    private void retour(ActionEvent event) {
+    }
+
+    @FXML
+    private void retourToRecette(ActionEvent event) {
+        
+       FXMLLoader loader= new FXMLLoader(getClass().getResource("./AccueilClientFXML.fxml"));
+                    Parent root;
+                    try 
+                    {
+                      root=loader.load();
+                     retour.getScene().setRoot(root);
+                    }
+                    catch (IOException ex) 
+                    {
+                        Logger.getLogger(DrawerviewClientMenuController.class.getName()).log(Level.SEVERE, null, ex);
+                    }   
+        
+        
+        
+        
+        
     }
     
     

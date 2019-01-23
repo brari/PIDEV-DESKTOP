@@ -68,8 +68,8 @@ public class ProduitService {
 //            ps.executeUpdate();
 //        }   
         
-     String req="INSERT INTO `prods`( `nompro`, `prixpro`, `categoriepro`, `detailspro`, `nompat`, `image`, `idpat`) "
-        + "VALUES ('"  + p.getNompro() + "','" + p.getPrixpro()+"','"+p.getCategoriepro()+"','"+p.getDetailspro()+"','"+p.getNompat()+"','"+p.getImage()+"','"+p.getIdp()+"')";
+     String req="INSERT INTO `prods`( `nompro`, `prixpro`, `categoriepro`, `detailspro`, `nompat`, `image`, `idpat`,`stock`) "
+        + "VALUES ('"  + p.getNompro() + "','" + p.getPrixpro()+"','"+p.getCategoriepro()+"','"+p.getDetailspro()+"','"+p.getNompat()+"','"+p.getImage()+"','"+p.getIdp()+"','"+5+"')";
        Statement stm=connexion.createStatement();
         stm.executeUpdate(req);
     }

@@ -70,6 +70,10 @@ public class AjouterMesEvenementFXMLController implements Initializable {
     String image;
     String lien_image;
     private FileInputStream fis;
+    @FXML
+    private TextField E_interesses_entry;
+    @FXML
+    private TextField E_capacite_entry;
 
 
     /**
@@ -183,7 +187,7 @@ public class AjouterMesEvenementFXMLController implements Initializable {
                     path = path.replace("file:/", "");
         
                     System.out.println("ath: "+path);
-                    Evenements e=new Evenements (E_nom_entry.getText(),  E_description_entry.getText(), E_adresse_entry.getText(),E_type_entry.getText(),java.sql.Date.valueOf(E_date_entry.getValue()),path);
+                    Evenements e=new Evenements (E_nom_entry.getText(),E_description_entry.getText(),E_adresse_entry.getText(),E_type_entry.getText(),java.sql.Date.valueOf(E_date_entry.getValue()),path,Integer.parseInt(E_interesses_entry.getText()),Integer.parseInt(E_capacite_entry.getText()));
                     es.ajouter_even(e);
                     TrayNotification tr = new TrayNotification();
 			tr.setAnimationType(AnimationType.POPUP);

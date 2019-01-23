@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="621.0" prefWidth="801.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pidev.ui.TraiterReclamationController">
+   <children>
+      <TableView fx:id="table_rec" layoutX="87.0" layoutY="47.0" prefHeight="200.0" prefWidth="638.0" style="-fx-border-color: gray; -fx-border-radius: 10;">
+        <columns>
+            <TableColumn fx:id="cl_id_rec" prefWidth="75.0" text="id_rec" />
+          <TableColumn fx:id="cl_date" prefWidth="75.0" sortType="DESCENDING" text="date" />
+          <TableColumn fx:id="cl_type" prefWidth="75.0" text="type" />
+            <TableColumn fx:id="cl_contenu" prefWidth="75.0" text="contenu" />
+            <TableColumn fx:id="cl_statut" prefWidth="75.0" text="statut" />
+            <TableColumn fx:id="cl_objet" prefWidth="75.0" text="objet " />
+            <TableColumn fx:id="cl_decision" prefWidth="75.0" text="decision" />
+            <TableColumn fx:id="cl_id_reclamant" prefWidth="111.0" text="id_reclamant" />
+        </columns>
+      </TableView>
+      <JFXTextArea fx:id="tx_reponse" labelFloat="true" layoutX="114.0" layoutY="343.0" promptText="Reponse">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXTextArea>
+      <ImageView fx:id="btn_envoie" accessibleRole="BUTTON" fitHeight="48.0" fitWidth="54.0" layoutX="677.0" layoutY="516.0" onMouseClicked="#envoyerEmail" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/icons8_Gmail_48px_1.png" />
+         </image>
+      </ImageView>
+      <JFXComboBox fx:id="cb_decision" layoutX="114.0" layoutY="282.0" prefHeight="25.0" prefWidth="123.0" promptText="Decision" />
+      <JFXButton fx:id="retour_btn" layoutX="675.0" layoutY="582.0" onAction="#Retour" prefHeight="34.0" prefWidth="78.0" style="-fx-border-color: gray; -fx-border-radius: 90;" text="Retour" />
+   </children>
+</AnchorPane>

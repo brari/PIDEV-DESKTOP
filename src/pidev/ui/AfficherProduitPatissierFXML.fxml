@@ -87,6 +87,7 @@
                </font>
             </Button>
             <ImageView fx:id="pa_icone" fitHeight="150.0" fitWidth="200.0" layoutX="577.0" layoutY="119.0" pickOnBounds="true" preserveRatio="true" />
+            <Button fx:id="ajouter" layoutX="828.0" layoutY="175.0" mnemonicParsing="false" onAction="#ajouterprod" prefHeight="38.0" prefWidth="127.0" style="-fx-background-color: DARKSALMON; -fx-background-radius: 40;" text="Ajouter Produit" textFill="WHITE" />
          </children>
       </AnchorPane>
    </center>

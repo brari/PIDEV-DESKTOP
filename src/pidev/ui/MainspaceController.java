@@ -88,7 +88,7 @@ public class MainspaceController implements Initializable {
         try {
             sidePane = FXMLLoader.load(getClass().getResource("./drawerview.fxml"));
                  drawer.setSidePane(sidePane);
-         
+        
         
             }
                  catch (IOException ex) {

@@ -119,7 +119,7 @@ public class AjoutPatisserieFXMLController implements Initializable {
                     int val=ConnexionFXMLController.session.getUser_id();
                     Patisserie p=new Patisserie(pa_nom.getText(),pa_adresse.getText(),
                             tel,pa_mail.getText(),val);
-                    p.setUrl(chemin);
+                    p.setUrl(pa_choix.getText());
                     PatisserieService ps=new PatisserieService();//connexion établie
                     try {
                         ps.ajouterPatisserie(p);

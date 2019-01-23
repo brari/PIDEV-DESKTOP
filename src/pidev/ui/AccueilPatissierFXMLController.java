@@ -78,7 +78,10 @@ VBox sidepane;
     @FXML
     private Button pa_modifier;
     
+    
 String path = "";   Patisserie pat; 
+    @FXML
+    private Button aff_prods;
     
     /**
      * Initializes the controller class.
@@ -289,6 +292,7 @@ String path = "";   Patisserie pat;
         });
         
     }
+    
 
     @FXML
     private void SupprimerPat(ActionEvent event) {
@@ -350,6 +354,26 @@ String path = "";   Patisserie pat;
 
             }
         });
+    }
+
+    @FXML
+    private void produits(ActionEvent event) {
+           
+        aff_prods.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("./AfficherProduitPatissierFXML.fxml"));
+                Parent root;
+                try {
+                    root = loader.load();
+                    aff_prods.getScene().setRoot(root);
+                } catch (IOException ex) {
+                    Logger.getLogger(AccueilPatissierFXMLController.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            }
+        });
+        
+    
     }
     
 }

@@ -18,6 +18,7 @@
       <JFXButton prefHeight="41.0" prefWidth="206.0" text="Les Commandes" />
       <JFXButton prefHeight="41.0" prefWidth="206.0" text="Les Commentaires" />
       <JFXButton prefHeight="39.0" prefWidth="201.0" text="Les Reclamations" />
+      <JFXButton fx:id="ListEven" onAction="#AfficherEven" prefHeight="31.0" prefWidth="208.0" text="Les événements" />
       <JFXButton fx:id="btn" onAction="#quit" prefHeight="50.0" prefWidth="201.0" text="Deconnexion" />
    </children>
 </VBox>

@@ -8,7 +8,7 @@ package pidev.ui;
 import java.io.IOException;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
+import javafx.event.EventHandler; 
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -21,20 +21,18 @@ import javafx.stage.Stage;
  * @author hp
  */
 public class FXMain extends Application {
-    
+
     @Override
     public void start(Stage primaryStage) throws IOException {
-        
-        
+
         //Parent root=FXMLLoader.load(getClass().getResource("./AfficheEvenementPatissierFXML.fxml"));
         //Parent root=FXMLLoader.load(getClass().getResource("./AccueilPatissierFXML.fxml"));
- 
-     //Parent root=FXMLLoader.load(getClass().getResource("./MainReclamationFXML.fxml"));
+        //Parent root=FXMLLoader.load(getClass().getResource("./MainReclamationFXML.fxml"));
         //Parent root=FXMLLoader.load(getClass().getResource("./AccueilClientFXML.fxml"));
         //Parent root=FXMLLoader.load(getClass().getResource("./AccueilClientEvenementFXML.fxml"));
-        Parent root=FXMLLoader.load(getClass().getResource("./AuthentificationFXML.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("./AuthentificationFXML.fxml"));
         Scene scene = new Scene(root);
-        
+
         primaryStage.setTitle("Annuaire Patisserie"); //titre de notre page
         primaryStage.setScene(scene);
         primaryStage.show();
@@ -46,5 +44,5 @@ public class FXMain extends Application {
     public static void main(String[] args) {
         launch(args);
     }
-    
+
 }

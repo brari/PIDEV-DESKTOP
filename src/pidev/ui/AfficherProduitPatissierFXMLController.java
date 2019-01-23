@@ -64,6 +64,7 @@ public class AfficherProduitPatissierFXMLController implements Initializable {
 
     @FXML
     private Button modif;
+    @FXML
     private Button ajouter;
     @FXML
     private Button supp;
@@ -560,6 +561,23 @@ String d=   dtf.format(now);
                doc.close();
                 }
         }) ;
+    }
+
+    @FXML
+    private void ajouterprod(ActionEvent event) {
+          ajouter.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("./AjouterFXML.fxml"));
+                Parent root;
+                try {
+                    root = loader.load();
+                    ajouter.getScene().setRoot(root);
+                } catch (IOException ex) {
+                    Logger.getLogger(AccueilPatissierFXMLController.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            }
+        });
     }
     
     

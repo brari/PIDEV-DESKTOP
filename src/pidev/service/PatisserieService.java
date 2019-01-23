@@ -143,9 +143,15 @@ public class PatisserieService {
 //        }
 //        ostream.close();
 //        //istream.close();
-        Image image=new Image("file:"+rst.getString("url"));
+        //Image image=new Image("file:"+rst.getString("url"));
+            if(rst.getString("url")!=null){
+                Image image=new Image("file:C:\\wamp64\\www\\kk\\PI\\AnnuaireWeb\\web\\Images\\"+rst.getString("url"));
+                return image;}
+            else{
+                Image image=new Image("file:C:\\wamp64\\www\\kk\\PI\\AnnuaireWeb\\web\\Images\\default.jpg");
+                return image;}
         
-        return image; }
+         }
         
         } catch (SQLException ex) {
             Logger.getLogger(PatisserieService.class.getName()).log(Level.SEVERE, null, ex);
@@ -154,7 +160,7 @@ public class PatisserieService {
 //        } catch (IOException ex) {
 //            Logger.getLogger(PatisserieService.class.getName()).log(Level.SEVERE, null, ex);
         }
-        return null;
+        return new Image("file:C:\\wamp64\\www\\kk\\PI\\AnnuaireWeb\\web\\Images\\default.jpg");
         
     }  
     

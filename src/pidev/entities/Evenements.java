@@ -20,6 +20,8 @@ public class Evenements {
     private Date date_E;
     //private int nombre_interesses;
     private String image_E;
+    private int interesses;
+    private int capacite;
 
     public Evenements() {
     }
@@ -28,6 +30,23 @@ public class Evenements {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
+    public int getInteresses() {
+        return interesses;
+    }
+
+    public int getCapacite() {
+        return capacite;
+    }
+
+    public void setInteresses(int interesses) {
+        this.interesses = interesses;
+    }
+
+    public void setCapacite(int capacite) {
+        this.capacite = capacite;
+    }
+
+    
     public int getIdE() {
         return idE;
     }
@@ -172,6 +191,17 @@ public class Evenements {
         this.date_E = date_E;
         this.nombre_interesses = nombre_interesses;
     }*/
+
+    public Evenements(String nom_E, String description_E, String adresse_E, String type_E, Date date_E, String image_E, int interesses, int capacite) {
+        this.nom_E = nom_E;
+        this.description_E = description_E;
+        this.adresse_E = adresse_E;
+        this.type_E = type_E;
+        this.date_E = date_E;
+        this.image_E = image_E;
+        this.interesses = interesses;
+        this.capacite = capacite;
+    }
     
     
 
@@ -195,8 +225,10 @@ public class Evenements {
 
     @Override
     public String toString() {
-        return "Evenements{" + "idE=" + idE + ", nom_E=" + nom_E + ", description_E=" + description_E + ", adresse_E=" + adresse_E + ", type_E=" + type_E + ", date_E=" + date_E + ", image_E=" + image_E + '}';
+        return "Evenements{" + "idE=" + idE + ", nom_E=" + nom_E + ", description_E=" + description_E + ", adresse_E=" + adresse_E + ", type_E=" + type_E + ", date_E=" + date_E + ", image_E=" + image_E + ", interesses=" + interesses + ", capacite=" + capacite + '}';
     }
+
+    
 
     
 
